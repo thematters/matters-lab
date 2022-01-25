@@ -1,0 +1,55 @@
+footer#footer
+    background-color: #151515
+    padding: 40px 0
+    +min($md)
+        padding: 64px 0
+    .col-6.col-md-2
+        border-right: 1px solid $black
+        +min($md)
+            border-right: none
+    .logo
+        margin: 0 0 24px 0
+        a
+            +bg('../img/logo.svg')
+            width: 120px
+            height: 24px
+            +min($md)
+                width: 142px
+                height: 28px
+    .text
+        p
+            font-size: 14px
+            color: $grey-light
+    .buttons
+        margin: 24px 0
+        padding: 0 0 8px 0
+        border-bottom: 1px solid $black
+        +min($md)
+            margin: 48px 0 0 0
+            padding: 0
+            border-bottom: none
+        .btn
+            margin: 0 24px 16px 0
+            +min($md)
+                margin: 0 24px 0 0
+            &:last-child
+                margin: 0
+            i.icon
+                width: 24px
+                height: 24px
+    .title
+        margin: 0 0 24px 0
+        h3
+            @extend %article-title
+    .list
+        ul
+            font-size: 14px
+            color: $grey-light
+            li
+                margin: 0 0 8px 0
+                &:last-child
+                    margin: 0
+                a
+                    +anm(color)
+                    &:hover
+                        color: $green

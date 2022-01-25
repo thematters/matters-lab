@@ -1,0 +1,25 @@
+- var title = 'Powering the Future of Web3'
+- var desc = 'Matters Lab is building Web3 social media ecosystem where users can collaboratively create and monetize digital assets, while controlling their own data asset.'
+- var url = 'https://matters-lab.io/ '
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0")
+	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	meta(name="description" content=desc)
+	//- Essential META Tags
+	meta(property='og:title', content=title)
+	meta(property='og:type', content='website')
+	meta(property='og:image', content=url+'img/thumb.jpg')
+	meta(property='og:url', content=url)
+	meta(name="twitter:card" content="summary_large_image")
+	//- Non-Essential, But Recommended
+	meta(property='og:description', content=desc)
+	meta(property='og:site_name', content=title)
+	meta(name="twitter:image:alt" content=desc)
+	//- Non-Essential, But Required for Analytics
+	meta(property='fb:app_id', content='')
+	meta(name="twitter:site" content="")
+	title #{title}
+	link(rel="shortcut icon" href="img/favicon.ico")
+	link(rel="stylesheet", href="css/app.min.css")

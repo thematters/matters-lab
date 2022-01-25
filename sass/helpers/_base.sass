@@ -1,0 +1,137 @@
+html, body
+    font:
+        size: 16px
+        weight: 400
+        family: 'Roboto', 微軟正黑體, Microsoft JhengHei, sans-serif
+    background-color: $noir
+    color: $white
+    -webkit-font-smoothing: antialiased
+    a
+        color: inherit
+        text-decoration: none
+        &:hover
+            color: inherit
+            text-decoration: none
+    figure
+        margin: 0
+    p:last-child
+        margin: 0
+    button
+        border: none
+        background-color: transparent
+        padding: 0
+    ul
+        padding: 0
+        margin: 0
+        list-style: none
+    h1,h2,h3,h4,h5,h6
+        margin: 0
+    hr
+        border: none
+#wrapper
+    width: 100vw
+    position: relative
+    overflow: hidden
+    .container
+        max-width: 1080px
+        padding: 0 16px
+        +min($lg)
+            padding: 0 12px
+    .img-fluid
+        max-width: 100%
+        height: auto
+    .row
+        margin: 0 -16px
+        +min($lg)
+            margin: 0 -12px
+        & > div[class*='col']
+            padding: 0 16px
+            +min($lg)
+                padding: 0 12px
+    .btn
+        +flex(row, nowrap, center, center)
+        display: inline-flex
+        i.icon
+            background:
+                position: center center
+                repeat: no-repeat
+                size: contain
+        &.outline
+            text-align: center
+            position: relative
+            &::before
+                +gradient-border(1, 2px, 28px)
+            &::after
+                +anm(opacity)
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                border-radius: 28px
+                z-index: 1
+                opacity: 0
+                z-index: 1
+                background: $heavy-metal
+            &:hover
+                color: inherit
+                &::after
+                    opacity: 1
+            span
+                position: relative
+                z-index: 2
+        &.arrow
+            span
+                @extend %article-title
+                color: #1ED7E2
+            i.icon
+                background-image: url('../img/icon-arrow.svg')
+                width: 94px
+                height: 13px
+                margin: 0 0 0 8px
+                transform: translateY(-6px)
+                +min($md)
+                    width: 155px
+                    height: 21px
+                    margin: 0 0 0 20px
+                    transform: translateY(-10px)
+        &.social
+            i.icon
+                +anm(background)
+                -webkit-mask:
+                    position: center center
+                    repeat: no-repeat
+                    size: contain
+                background: $white
+            &:hover
+                i.icon
+                    background: $green
+            &.twitter
+                i.icon
+                    -webkit-mask-image: url(../img/icon-twitter.svg)
+            &.discord
+                i.icon
+                    -webkit-mask-image: url(../img/icon-discord.svg)
+            &.medium
+                i.icon
+                    -webkit-mask-image: url(../img/icon-medium.svg)
+            &.telegram
+                i.icon
+                    -webkit-mask-image: url(../img/icon-telegram.svg)
+            &.youtube
+                i.icon
+                    -webkit-mask-image: url(../img/icon-youtube.svg)
+            &.opensea
+                i.icon
+                    -webkit-mask-image: url(../img/icon-opensea.svg)
+            &.instagram
+                i.icon
+                    -webkit-mask-image: url(../img/icon-instagram.svg)
+            &.facebook
+                i.icon
+                    -webkit-mask-image: url(../img/icon-facebook.svg)
+            &.matters
+                i.icon
+                    -webkit-mask-image: url(../img/icon-matters.svg)

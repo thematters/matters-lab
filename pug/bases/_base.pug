@@ -1,0 +1,17 @@
+block variables
+
+doctype html
+html(lang="en")
+    include ../components/_head.pug
+    body
+        #wrapper
+            include ../components/_nav.pug
+            include ../components/_menu.pug
+            main#main(class=pageMain)
+                block main
+            include ../components/_footer.pug
+        script(src="js/app.min.js")
+        script.
+            window.onload = function() {
+                #{pageMain}.init();
+            }

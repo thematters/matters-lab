@@ -1,0 +1,360 @@
+extends bases/_base
+
+block variables
+	- var pageMain = 'index'
+
+block main
+	section.intro.d-flex.align-items-center.flex-column.flex-md-row
+		.ratio.ratio-16x9.d-none.d-md-block
+			video.embed-responsive-item(playsinline autoplay loop muted)
+				source(type="video/mp4")
+		.container
+			header.text-center
+				h1.d-inline-block Powering the Future of Web3
+			article
+				.row
+					.col-12.col-md-6
+						p Matters Lab is building Web3 social media ecosystem where users can collaboratively create and monetize digital assets, while controlling their own data asset.
+		.tips
+			i.icon.d-block
+	section.who_we_empower.d-flex.justify-content-center.align-items-center
+		.orbit.orbit-1
+		.orbit.orbit-2
+		.orbit.orbit-3
+			.planets
+				.planet
+		.orbit.orbit-4
+			.planets
+				.planet
+		.orbit.orbit-5
+			.planets
+				.planet.planet-1.active
+				.planet.planet-2
+				.planet.planet-3
+		.container
+			.desc.desc-l
+			.desc.desc-r
+			header.text-center
+				h2.d-inline-block Who We Empower
+			hr
+			article.text-center
+				.investors
+					.title
+						h3 Investors
+					.text
+						p Participate in Web3 innovation, grow with the community, get reward
+				.developers
+					.title
+						h3 Developers
+					.text
+						p Open-source community, build Dapp, create the future
+				.creators
+					.title
+						h3 Creators
+					.text
+						p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
+	section.our_partners_and_supporters
+		.container
+			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
+				h2.d-inline-block.align-self-start.align-self-md-center Our Partners & Supporters
+				.buttons.align-self-end.align-self-md-center
+					a.btn.arrow
+						span Contact Us
+						i.icon
+			article.d-flex.flex-wrap.justify-content-md-center
+				a.longling_capital.ratio.ratio-1x1(href="http://www.longling.com/" target="_blank")
+				a.protocol_labs.ratio.ratio-1x1(href="#" target="_blank")
+				a.mask.ratio.ratio-1x1(href="#" target="_blank")
+				a.crust.ratio.ratio-1x1(href="https://drive.google.com/drive/u/0/folders/1SsWJeaIiy52AR_JZjYAU7bJmHtDKTrFf" target="_blank")
+				a.likecoin.ratio.ratio-1x1(href="#" target="_blank")
+				a.snap_fingers.ratio.ratio-1x1(href="#" target="_blank")
+				a.incuba_alpha.ratio.ratio-1x1(href="https://www.incuba.capital/" target="_blank")
+				a.google_news_initiative.ratio.ratio-1x1(href="https://newsinitiative.withgoogle.com/info/innovation-challenges" target="_blank")
+				a.grant_for_the_web.ratio.ratio-1x1(href="https://www.grantfortheweb.org/" target="_blank")
+	section.our_vision_and_mission.d-flex.align-items-center.flex-column.flex-md-row
+		.ratio.ratio-16x9.d-none.d-md-block
+			video.embed-responsive-item(playsinline autoplay loop muted)
+				source(type="video/mp4")
+		.container
+			header
+				h2.d-inline-block Our Vision and Mission
+			article
+				.row.align-items-center
+					.col-md-5
+						.text
+							p
+								| We wish to build a more equal, decentralized, and trustless world.
+								br
+								| Matters Lab was established in 2018 with the mission to create a freer and fairer creator ecosystem through the next evolution of the Internet, Web3.
+						.buttons
+							a.btn.outline
+								span BE A PART OF THE MISSION
+	section.creator_economy_in_web3
+		.container
+			header
+				h2.d-inline-block Creator Economy in Web3
+			article
+				figure.img
+					img.img-fluid(src="img/ceiw-visual.png")
+	section.projects_spotlight
+		.container
+			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
+				h2.d-inline-block.align-self-start.align-self-md-center Projects Spotlight
+				.buttons.align-self-end.align-self-md-center
+					a.btn.arrow(href="https://www.cakeresume.com/companies/matters/jobs" target="_blank")
+						span JOIN US
+						i.icon
+			article
+				.matters_news
+					.row
+						.col-12.col-md-6
+							figure.img
+								img.img-fluid(src="img/ps-matters_news.png")
+						.col-12.col-md-6
+							.title
+								h3 Matters.News
+							.text
+								p
+									strong The massively popular decentralized publishing platform that redefines the creator economy
+								p Matters.news is the community space where most users first enter Matterverse, providing an interface as familiar as Web2 applications but as powerful as Web3 Dapp.
+								p To empower creators, the open-sourced platform is based on InterPlanetary File System (IPFS), a protocol and peer-to-peer network for storing and sharing data in a distributed file system.
+								p Today, Matters.news is growing with more than 80,000 creators and 6 million monthly page views committed to user experience, quality content, and free speech.
+							.buttons.text-end
+								a.btn.outline
+									span LEARN MORE
+				.traveloggers
+					.row
+						.col-12.col-md-6
+							figure.img
+								img.img-fluid(src="img/ps-traveloggers.png")
+						.col-12.col-md-6
+							.title
+								h3 Traveloggers
+							.text
+								p
+									| Traveloggers are dynamic NFTs used as avatars and notebooks, where users can take turns writing content on Ethereum and trade the resulting NFT. It is the first Dapp built on Matters' "logbook" protocol, allowing users to collaborate on digital assets sequentially. The project was a massive success with pre-order selling out within 10 minutes and now trading on 
+									a(href="https://opensea.io/Traveloggers?tab=created" target="_blank") Open Sea
+									| .
+							.buttons.text-end
+								a.btn.outline(href="https://matterslab.medium.com/traveloggers-is-the-first-nft-social-media-avatar-to-expand-private-ownership-with-collective-e09875f5948d" target="_blank")
+									span LEARN MORE
+				.on_site
+					.row
+						.col-12.col-md-6
+							figure.img
+								img.img-fluid(src="img/ps-on_site.png")
+						.col-12.col-md-6
+							.title
+								h3 Non-fiction Writing Award
+							.text
+								p Matters and the Renaissance Foundation launched the Non-fiction Writing Award to support independent writers persistent in writing at the frontline of the era.
+							.buttons.text-end
+								a.btn.outline(href="https://mattersonsite-en.mystrikingly.com/" target="_blank")
+									span LEARN MORE
+				.the_space
+					.row
+						.col-12.col-md-6
+							figure.img
+								img.img-fluid(src="img/ps-the_space.png")
+						.col-12.col-md-6
+							.title
+								h3 The Space
+							.text
+								p The Space Project brings together NFT, Harberger Tax, and Universal Basic Income concepts in an open-source community. Launching 2022.
+								p
+									strong Coming soon
+							.buttons.text-end
+								a.btn.outline
+									span LEARN MORE
+	section.press_coverage
+		.container
+			header
+				h2.d-inline-block Press Coverage
+			article
+				.drag
+				.swiper
+					.swiper-wrapper
+						.swiper-slide
+							a.digest
+								div
+									.title
+										h3 Rest of World
+									.text
+										p “Blockchain allows Matters users to collectively determine its rules, and to decide what content has value...Matters is one of the few remaining online venues where users from across the political spectrum can engage in discussion and debate.”
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+						.swiper-slide
+							a.digest
+								div
+									.title
+										h3 The Protocol
+									.text
+										p "Matters give Chinese citizens a way to speak out that cannot be erased by censors."
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+						.swiper-slide
+							a.digest
+								div
+									.title
+										h3 ColumB
+									.text
+										p “The [Chinese-language media’s] attempts to adopt new technology to weather financial and political turbulence can inspire the West...allowing Matters users to trade NFT avatars empower users to independently open censorship-resilient sites, turning their work into a part of the Ethereum blockchain as a public ledger and selling it.”
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+	section.behind-matters-news
+		.container
+			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
+				h2.d-inline-block.align-self-start.align-self-md-center Behind Matters.news
+				.buttons.align-self-end.align-self-md-center
+					a.btn.arrow(href="https://www.cakeresume.com/companies/matters/jobs" target="_blank")
+						span JOIN US
+						i.icon
+			article
+				.row
+					.col-6.col-md-3
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-jieping_zhang.png")
+							span.title Founder, CEO
+							span.name Jieping Zhang
+					.col-6.col-md-3
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-guo_liu.png")
+							span.title Co-founder, CTO
+							span.name Guo Liu
+					.col-6.col-md-3
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-beryl_liu.png")
+							span.title Co-founder, Operation
+							span.name Beryl Liu
+				.row
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-zeck_li.png")
+							span.title Product Manager
+							span.name Zeck Li
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-yihan_huang.png")
+							span.title UI/UX Designer
+							span.name Yihan Huang
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-xia.png")
+							span.title Data Scientist
+							span.name Xia
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-robert_lu.png")
+							span.title Product Engineer
+							span.name Robert Lu
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-tomas_cheng.png")
+							span.title Sr. Software Engineer
+							span.name Tomas Cheng
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-charlie.png")
+							span.title Developer (PT)
+							span.name Charlie
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-lee.png")
+							span.title Community Head
+							span.name Lee
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-yingshin_lee.png")
+							span.title Community
+							span.name Yingshin Lee
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-dobby_will.png")
+							span.title Community
+							span.name Dobby Will
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-xy.png")
+							span.title Event
+							span.name XY
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-xinan_he.png")
+							span.title Event
+							span.name Xinan He
+	section.follow_us
+		.container
+			.content
+				header.text-center
+					h2.d-inline-block Follow Us
+				article.text-center
+					.text
+						p Get the latest news about our progress and Web 3.
+					.form
+						.form-group
+							input.form-control(type="email" placeholder="Your e-mail")
+							.outline
+						button.btn
+							i.icon
+					.buttons
+						a.btn.social.twitter(href="https://twitter.com/Mattersw3b" target="_blank")
+							i.icon
+						a.btn.social.discord(href="https://discord.com/invite/matterslab" target="_blank")
+							i.icon
+						a.btn.social.medium(href="https://matterslab.medium.com/" target="_blank")
+							i.icon
+						a.btn.social.telegram(href="#" target="_blank")
+							i.icon
+	section.our_latest_blogs
+		.container
+			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
+				h2.d-inline-block.align-self-start.align-self-md-center Our Latest Blogs:
+				.buttons.align-self-end.align-self-md-center
+					a.btn.arrow
+						span Read More
+						i.icon
+			article
+				.row
+					.col-12.col-md-6
+						.digest
+							div
+								.title
+									h3 NFT is more than a bubble: It’s changing the Internet
+								.text
+									p Author: Jieping Zhang, Annie
+									p NFTs are exploding in popularity in the cryptocurrency market, with sales of more than 2.5 billion U.S. dollars as of July 2021, up from 13.7 million U.S. dollars in the first half of 2020.
+									p Much talk has been going on about an “NFT bubble” and …
+							div
+								.buttons
+									a.btn(href="https://matterslab.medium.com/nft-is-more-than-a-bubble-its-changing-the-internet-424024eebb17" target="_blank") Read more
+					.col-12.col-md-6
+						.digest
+							div
+								.title
+									h3 Three reasons why NFT is the next evolution of art collection
+								.text
+									p Author: Jieping Zhang, Annie
+									p Since 2021, NFTs (Non-Fungible Token) has exploded in popularity, mesmerizing the general public, artists, gamers and other creatives in the entertainment and media sectors. The media called the popularity of NFTs “strange and iconic”. …
+							div
+								.buttons
+									a.btn(href="https://matterslab.medium.com/three-reasons-why-nft-is-the-next-evolution-of-art-collection-d2a7f0ff0897" target="_blank") Read more

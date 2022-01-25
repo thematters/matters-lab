@@ -1,0 +1,52 @@
+@mixin anm($where, $time: .3s, $ease: cubic-bezier(.34,.07,.095,.995))
+  transition-property: $where
+  transition-duration: $time
+  transition-timing-function: $ease
+
+@mixin flex($direction, $wrap, $justify, $align)
+  display: flex
+  flex-direction: $direction
+  flex-wrap: $wrap
+  justify-content: $justify
+  align-items: $align
+
+@mixin min($width)
+  @media (min-width: $width)
+    @content
+
+@mixin max($width)
+  @media (max-width: $width)
+    @content
+
+@mixin perf($where)
+  will-change: $where
+  transform: translateZ(0)
+  backface-visibility: hidden
+  perspective: 1000px
+
+@mixin bg($img, $size: contain)
+  background:
+    image: url($img),
+    position: center center
+    repeat: no-repeat
+    size: $size
+
+@mixin gradient-border($opacity: 1, $padding: 1px, $radius: 20px)
+    +anm(opacity)
+    content: ''
+    display: block
+    position: absolute
+    opacity: $opacity
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    border-radius: $radius
+    z-index: 0
+    padding: $padding
+    background: $heavy-metal
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+    pointer-events: none

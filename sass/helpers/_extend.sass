@@ -1,0 +1,60 @@
+%banner-title
+    font:
+        weight: 700
+        size: 36px
+    line-height: 48px
+    +min($md)
+        font-size: 116px
+        line-height: 120px
+
+%section-title
+    font:
+        weight: 700
+        size: 28px
+    line-height: 32px
+    +min($md)
+        font-size: 48px
+        line-height: 56px
+
+%header-title
+    font:
+        weight: 700
+        size: 24px
+    line-height: 32px
+    +min($md)
+        font-size: 36px
+        line-height: 48px
+
+%article-title
+    font:
+        weight: 700
+        size: 18px
+    line-height: 24px
+    +min($md)
+        font-size: 24px
+        line-height: 32px
+
+%article-body
+    font:
+        weight: 400
+        size: 16px
+    line-height: 20px
+    +min($md)
+        font-size: 18px
+        line-height: 24px
+
+%halo
+    content: ''
+    display: block
+    position: absolute
+    z-index: 0
+    pointer-events: none
+
+%pink-halo
+    @extend %halo
+    background: radial-gradient(50% 50% at 50% 50%, rgba(251, 134, 255, 0.3) 0%, rgba(251, 134, 255, 0.12) 53.12%, rgba(251, 134, 255, 0) 100%)
+    
+
+%blue-halo
+    @extend %halo
+    background: radial-gradient(47.3% 47.3% at 50% 50%, rgba(106, 120, 255, 0.3) 0%, rgba(106, 120, 255, 0.17) 59.38%, rgba(106, 120, 255, 0) 100%)
