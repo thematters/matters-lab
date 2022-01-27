@@ -30,20 +30,20 @@ var index = function () {
 			scrollTrigger: {
 				trigger: ".who_we_empower",
 				start: "top top",
-				end: "+=400%",
+				end: "+=300%",
 				scrub: true,
 				pin: true
 			}
 		});
-		tl.to('.who_we_empower .investors', {duration: .5, opacity: 0}, 0)
+		tl.to('.who_we_empower .investors', {duration: .5, autoAlpha: 0}, 0)
 		  .to('.orbit-5 .planets', {duration: 1, rotation: 111}, 0)
 		  .set('.orbit-5 .planet-1', {className:"-=planet planet-1"}, 0)
-		  .from('.who_we_empower .developers', {duration: 1, opacity: 0}, .5)
+		  .from('.who_we_empower .developers', {duration: 1, autoAlpha: 0}, .5)
 		  .set('.orbit-5 .planet-2', {className:"-=planet planet-2 active"}, .5)
-		  .to('.who_we_empower .developers', {duration: .5, opacity: 0}, 1.5)
+		  .to('.who_we_empower .developers', {duration: .5, autoAlpha: 0}, 1.5)
 		  .to('.orbit-5 .planets', {duration: 1, rotation: 250}, 1.5)
 		  .set('.orbit-5 .planet-2', {className:"-=planet planet-2"}, 1.5)
-		  .from('.who_we_empower .creators', {duration: 1, opacity: 0}, 2)
+		  .from('.who_we_empower .creators', {duration: 1, autoAlpha: 0}, 2)
 		  .set('.orbit-5 .planet-3', {className:"-=planet planet-3 active"}, 2)
 		gsap.to('.orbit-3 .planets', {duration: 180, repeat: -1, rotation: 360, ease: "none"})
 		gsap.to('.orbit-4 .planets', {duration: 120, repeat: -1, rotation: 360, ease: "none"})
@@ -53,6 +53,9 @@ var index = function () {
 			document.querySelector(".intro video").src = "video/intro-video.mp4";
 			document.querySelector(".our_vision_and_mission video").src = "video/ovam-video.mp4";
 		}
+	}
+	var toFollowUs = ()=>{
+		document.querySelector('.follow_us').scrollIntoView({ behavior: 'smooth', block: 'center' })
 	}
 	var init = ()=>{
 		gsap.set('#nav .close', {display: 'none'})
@@ -68,6 +71,9 @@ var index = function () {
 		},
 		menu: (boolean)=>{
 			menuDisplay(boolean)
+		},
+		goto: ()=>{
+			toFollowUs();
 		}
 	};
 }();

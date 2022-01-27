@@ -14,7 +14,7 @@ block main
 			article
 				.row
 					.col-12.col-md-6
-						p Matters Lab is building Web3 social media ecosystem where users can collaboratively create and monetize digital assets, while controlling their own data asset.
+						p A Web3 social media ecosystem that lets users collaboratively create and monetize digital assets with complete control.
 		.tips
 			i.icon.d-block
 	section.who_we_empower.d-flex.justify-content-center.align-items-center
@@ -32,8 +32,6 @@ block main
 				.planet.planet-2
 				.planet.planet-3
 		.container
-			.desc.desc-l
-			.desc.desc-r
 			header.text-center
 				h2.d-inline-block Who We Empower
 			hr
@@ -42,7 +40,7 @@ block main
 					.title
 						h3 Investors
 					.text
-						p Participate in Web3 innovation, grow with the community, get reward
+						p Be part of the Web3 innovation movement and reap rewards
 				.developers
 					.title
 						h3 Developers
@@ -58,9 +56,13 @@ block main
 			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
 				h2.d-inline-block.align-self-start.align-self-md-center Our Partners & Supporters
 				.buttons.align-self-end.align-self-md-center
-					a.btn.arrow
-						span Contact Us
-						i.icon
+					.d-flex.flex-column
+						a.btn.arrow(href="mailto:hi@matters.news" target="_blank")
+							span Contact Us
+							i.icon
+						a.btn.arrow(href="mailto:hi@matters.news" target="_blank")
+							span Contact Us
+							i.icon
 			article.d-flex.flex-wrap.justify-content-md-center
 				a.longling_capital.ratio.ratio-1x1(href="http://www.longling.com/" target="_blank")
 				a.protocol_labs.ratio.ratio-1x1(href="#" target="_blank")
@@ -82,12 +84,10 @@ block main
 				.row.align-items-center
 					.col-md-5
 						.text
-							p
-								| We wish to build a more equal, decentralized, and trustless world.
-								br
-								| Matters Lab was established in 2018 with the mission to create a freer and fairer creator ecosystem through the next evolution of the Internet, Web3.
+							p Matters Lab was established in 2018, with the mission to create a freer and fairer creator ecosystem through the next evolution of the Internet, Web3.
+							p Let's create a more equal, decentralized, and trustless world together.
 						.buttons
-							a.btn.outline
+							button.btn.outline(onclick="index.goto()")
 								span BE A PART OF THE MISSION
 	section.creator_economy_in_web3
 		.container
@@ -98,12 +98,8 @@ block main
 					img.img-fluid(src="img/ceiw-visual.png")
 	section.projects_spotlight
 		.container
-			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
-				h2.d-inline-block.align-self-start.align-self-md-center Projects Spotlight
-				.buttons.align-self-end.align-self-md-center
-					a.btn.arrow(href="https://www.cakeresume.com/companies/matters/jobs" target="_blank")
-						span JOIN US
-						i.icon
+			header
+				h2.d-inline-block Projects Spotlight
 			article
 				.matters_news
 					.row
@@ -147,7 +143,7 @@ block main
 							.title
 								h3 Non-fiction Writing Award
 							.text
-								p Matters and the Renaissance Foundation launched the Non-fiction Writing Award to support independent writers persistent in writing at the frontline of the era.
+								p Matters and the Renaissance Foundation launched the Non-fiction Writing Award to support independent writers bravely writing at the frontline of the era.
 							.buttons.text-end
 								a.btn.outline(href="https://mattersonsite-en.mystrikingly.com/" target="_blank")
 									span LEARN MORE
@@ -164,7 +160,7 @@ block main
 								p
 									strong Coming soon
 							.buttons.text-end
-								a.btn.outline
+								a.btn.outline(href="https://twitter.com/thespace2022" target="_blank")
 									span LEARN MORE
 	section.press_coverage
 		.container
@@ -200,7 +196,7 @@ block main
 							a.digest
 								div
 									.title
-										h3 ColumB
+										h3 Columbia Journalism Review
 									.text
 										p “The [Chinese-language media’s] attempts to adopt new technology to weather financial and political turbulence can inspire the West...allowing Matters users to trade NFT avatars empower users to independently open censorship-resilient sites, turning their work into a part of the Ethereum blockchain as a public ledger and selling it.”
 								div
@@ -212,9 +208,13 @@ block main
 			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
 				h2.d-inline-block.align-self-start.align-self-md-center Behind Matters.news
 				.buttons.align-self-end.align-self-md-center
-					a.btn.arrow(href="https://www.cakeresume.com/companies/matters/jobs" target="_blank")
-						span JOIN US
-						i.icon
+					.d-flex.flex-column
+						a.btn.arrow(href="https://www.cakeresume.com/companies/matters/jobs" target="_blank")
+							span JOIN US
+							i.icon
+						a.btn.arrow(href="https://www.cakeresume.com/companies/matters/jobs" target="_blank")
+							span JOIN US
+							i.icon
 			article
 				.row
 					.col-6.col-md-3
@@ -302,7 +302,7 @@ block main
 								img.img-fluid(src="img/bmn-xinan_he.png")
 							span.title Event
 							span.name Xinan He
-	section.follow_us
+	section.follow_us#follow_us
 		.container
 			.content
 				header.text-center
@@ -310,12 +310,23 @@ block main
 				article.text-center
 					.text
 						p Get the latest news about our progress and Web 3.
-					.form
-						.form-group
-							input.form-control(type="email" placeholder="Your e-mail")
-							.outline
-						button.btn
-							i.icon
+					#mc_embed_signup
+						form#mc-embedded-subscribe-form.validate(action='https://news.us20.list-manage.com/subscribe/post?u=2b73e9a364e173e88fe6a624f&id=61bc380ea9' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+							#mc_embed_signup_scroll
+								.mc-field-group
+									input#mce-EMAIL.required.email(type='email' value='' name='EMAIL' placeholder="Your e-mail")
+									.outline
+								#mce-responses.clear.foot
+									#mce-error-response.response(style='display:none')
+									#mce-success-response.response(style='display:none')
+								div(style='position: absolute; left: -5000px;' aria-hidden='true')
+									input(type='text' name='b_2b73e9a364e173e88fe6a624f_61bc380ea9' tabindex='-1' value='')
+								.optionalParent
+									.clear.foot
+										input#mc-embedded-subscribe.button(type='submit' value='Subscribe' name='subscribe')
+					script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+					script(type='text/javascript').
+						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
 					.buttons
 						a.btn.social.twitter(href="https://twitter.com/Mattersw3b" target="_blank")
 							i.icon
@@ -330,9 +341,13 @@ block main
 			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
 				h2.d-inline-block.align-self-start.align-self-md-center Our Latest Blogs:
 				.buttons.align-self-end.align-self-md-center
-					a.btn.arrow
-						span Read More
-						i.icon
+					.d-flex.flex-column
+						a.btn.arrow(href="https://matterslab.medium.com/" target="_blank")
+							span Read More
+							i.icon
+						a.btn.arrow(href="https://matterslab.medium.com/" target="_blank")
+							span Read More
+							i.icon
 			article
 				.row
 					.col-12.col-md-6

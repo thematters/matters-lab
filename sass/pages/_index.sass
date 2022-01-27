@@ -3,9 +3,7 @@
     +min($md)
         padding: 0 0 120px 0
     section
-        padding: 60px 0
-        +min($md)
-            padding: 120px 0
+        margin: 0 0 120px 0
         header
             h2
                 @extend %section-title
@@ -16,6 +14,16 @@
                 margin: 30px 0 0 0
                 +min($md)
                     margin: 0
+                    position: relative
+                    overflow: hidden
+                    height: 32px
+                .d-flex
+                    +anm(transform)
+                    height: 64px
+                &:hover
+                    .d-flex
+                        transform: translateY(-32px)
+
         article
             div.title
                 margin: 0 0 16px 0
@@ -27,12 +35,10 @@
     section.intro
         +bg('../img/intro-bg-m.png')
         position: relative
-        padding: 0
         background-position: center 20%
         +min($md)
-            height: 100vh
-            min-height: 1080px
             background: none
+            height: 100vh
         .ratio
             position: absolute
             z-index: 0
@@ -92,12 +98,11 @@
                 width: 100%
                 height: 100%
     section.who_we_empower
-        position: relative
         +bg('../img/wwe-bg.jpg')
+        position: relative
         height: 100vh
-        min-height: 900px
-        +min($md)
-            min-height: 1080px
+        padding: 180px 0 0 0
+        margin: 0 0 220px 0
         &::before, &::after
             width: 774px
             height: 774px
@@ -146,6 +151,7 @@
                     width: 788px
                     height: 788px
                 .planets
+                    +perf(transform)
                     .planet
                         background: radial-gradient(50.63% 59.72% at 61.11% 31.94%, #259984 0%, #094A2B 68.23%, #0E652C 100%)
                         top: -8px
@@ -158,6 +164,7 @@
                     width: 656px
                     height: 656px
                 .planets
+                    +perf(transform)
                     .planet
                         background: radial-gradient(50.63% 59.72% at 61.11% 31.94%, #6E94F5 0%, #133A75 68.23%, #0E5065 100%)
                         top: calc(100% - 8px)
@@ -170,6 +177,7 @@
                     width: 494px
                     height: 494px
                 .planets
+                    +perf(transform)
                     .planet
                         &::before
                             +anm(transform)
@@ -222,10 +230,10 @@
         header
             width: 100%
             position: absolute
-            top: -133%
+            top: -60%
             left: 0
             +min($md)
-                top: -167.5%
+                top: -85%
         hr
             +bg('../img/wwe-dec-line.jpg')
             width: 1px
@@ -233,8 +241,10 @@
             margin: 0 auto 16px auto
         article
             position: relative
-            width: 350px
-            margin: 0 auto
+            width: 280px
+            margin: 0 auto 80px auto
+            +min($md)
+                width: 350px
             .text
                 p
                     color: $grey
@@ -298,10 +308,9 @@
         position: relative
         padding-bottom: 100%
         +min($md)
-            height: 100vh
-            min-height: 1080px
             padding: 0
             background: none
+            height: 100vh
         .ratio
             position: absolute
             z-index: 0
@@ -362,7 +371,7 @@
                 margin: 0 0 80px 0
         article
             & > div
-                margin: 0 0 160px 0
+                margin: 0 0 120px 0
                 +min($md)
                     margin: 0 0 80px 0
                 &:last-child
@@ -413,12 +422,12 @@
                 .digest
                     +flex(column, wrap, space-between, initial)
                     width: 100%
-                    height: 368px
+                    height: 400px
                     border-radius: 20px
                     padding: 24px
                     background-color: #1C1C1C
                     +min($md)
-                        height: 328px
+                        height: 335px
                     &::before
                         +gradient-border(0, 2px)
                     &:hover::before
@@ -477,64 +486,83 @@
             margin: 0 auto
             .text
                 margin: 0 0 40px 0
-            .form
+            #mc_embed_signup
                 margin: 0 0 48px 0
-                position: relative
-                .form-group
+                #mc_embed_signup_scroll
                     position: relative
-                    input.form-control
-                        background-color: $black
-                        border-radius: 28px
-                        border: none
-                        color: $white
-                        width: 100%
-                        height: 56px
-                        padding: 8px 56px 8px 24px
-                        &:focus
-                            outline: none!important
-                            & + .outline::before
-                                opacity: 1
-                    .outline
+                    .mc-field-group
+                        position: relative
+                        input#mce-EMAIL
+                            background-color: $black
+                            border-radius: 28px
+                            border: none
+                            color: $white
+                            width: 100%
+                            height: 56px
+                            padding: 8px 56px 8px 24px
+                            &:focus
+                                outline: none!important
+                                & + .outline::before
+                                    opacity: 1
+                            &.mce_inline_error:focus
+                                & + .outline
+                                    &::before
+                                        background: red
+                                        opacity: 1
+                        .outline
+                            position: absolute
+                            top: 0
+                            left: 0
+                            right: 0
+                            bottom: 0
+                            border-radius: 28px
+                            pointer-events: none
+                            &::before
+                                +gradient-border(0, 1px, 28px)
+                        .mce_inline_error[for="mce-EMAIL"]
+                            display: none!important
+                    #mce-responses
+                        padding: 5px 10px
+                        color: $green
+                    .optionalParent
+                        width: 40px
+                        height: 40px
                         position: absolute
-                        top: 0
-                        left: 0
-                        right: 0
-                        bottom: 0
-                        border-radius: 28px
-                        pointer-events: none
-                        &::before
-                            +gradient-border(0, 1px, 28px)
-                button.btn
-                    width: 40px
-                    height: 40px
-                    border-radius: 50%
-                    background: $heavy-metal
-                    position: absolute
-                    top: 8px
-                    right: 8px
-                    z-index: 1
-                    &::before
-                        +anm(opacity)
-                        content: ''
-                        display: block
-                        position: absolute
-                        top: 0
-                        left: 0
-                        right: 0
-                        bottom: 0
-                        background: linear-gradient(103.18deg, #43C0B9 -84.65%, #228CDA 3.35%, #B81DEF 99.01%)
-                        border-radius: 50%
-                        z-index: 0
-                        opacity: 0
-                    &:hover::before
-                        opacity: 1
-                    i.icon
+                        top: 8px
+                        right: 8px
                         z-index: 1
-                        width: 16px
-                        height: 16px
-                        background-image: url(../img/icon-send.svg)
-                &:focus
-                    +gradient-border
+                        & > div
+                            width: 100%
+                            height: 100%
+                            border-radius: 50%
+                            background: $heavy-metal
+                            &::before
+                                +anm(opacity)
+                                content: ''
+                                display: block
+                                position: absolute
+                                top: 0
+                                left: 0
+                                right: 0
+                                bottom: 0
+                                background: linear-gradient(103.18deg, #43C0B9 -84.65%, #228CDA 3.35%, #B81DEF 99.01%)
+                                border-radius: 50%
+                                z-index: 0
+                                opacity: 0
+                            &:hover::before
+                                opacity: 1
+                            input#mc-embedded-subscribe
+                                +bg('../img/icon-send.svg', 12px)
+                                width: 100%
+                                height: 100%
+                                border-radius: 50%
+                                font-size: 0%
+                                text-indent: -9999px
+                                margin: 0
+                                background-color: transparent
+                                position: relative
+                                z-index: 1
+                                border: none
             .buttons
                 .btn
                     margin: 0 12px
