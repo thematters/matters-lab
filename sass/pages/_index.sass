@@ -12,14 +12,17 @@
                 -webkit-text-fill-color: transparent
             .buttons
                 margin: 30px 0 0 0
+                position: relative
+                overflow: hidden
+                height: 24px
                 +min($md)
                     margin: 0
-                    position: relative
-                    overflow: hidden
                     height: 32px
                 .d-flex
                     +anm(transform)
-                    height: 64px
+                    height: 48px
+                    +min($md)
+                        height: 64px
                 &:hover
                     .d-flex
                         transform: translateY(-32px)
