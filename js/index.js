@@ -35,7 +35,7 @@ var index = function () {
 				pin: true
 			}
 		});
-		tl.to('.who_we_empower .investors', {duration: .5, autoAlpha: 0}, 0)
+		tl.to('.who_we_empower .creators', {duration: .5, autoAlpha: 0}, 0)
 		  .to('.orbit-5 .planets', {duration: 1, rotation: 111}, 0)
 		  .set('.orbit-5 .planet-1', {className:"-=planet planet-1"}, 0)
 		  .from('.who_we_empower .developers', {duration: 1, autoAlpha: 0}, .5)
@@ -43,7 +43,7 @@ var index = function () {
 		  .to('.who_we_empower .developers', {duration: .5, autoAlpha: 0}, 1.5)
 		  .to('.orbit-5 .planets', {duration: 1, rotation: 250}, 1.5)
 		  .set('.orbit-5 .planet-2', {className:"-=planet planet-2"}, 1.5)
-		  .from('.who_we_empower .creators', {duration: 1, autoAlpha: 0}, 2)
+		  .from('.who_we_empower .investors', {duration: 1, autoAlpha: 0}, 2)
 		  .set('.orbit-5 .planet-3', {className:"-=planet planet-3 active"}, 2)
 		gsap.to('.orbit-3 .planets', {duration: 180, repeat: -1, rotation: 360, ease: "none"})
 		gsap.to('.orbit-4 .planets', {duration: 120, repeat: -1, rotation: 360, ease: "none"})
@@ -57,6 +57,12 @@ var index = function () {
 	var toFollowUs = ()=>{
 		document.querySelector('.follow_us').scrollIntoView({ behavior: 'smooth', block: 'center' })
 	}
+	var pcDrag = ()=>{
+		const mount = document.querySelectorAll('.swiper-slide').length
+		if(mount > 3){
+			gsap.set('.press_coverage article', {className:"+=article active"})
+		}
+	}
 	var init = ()=>{
 		gsap.set('#nav .close', {display: 'none'})
 		gsap.set(menu, {autoAlpha: 0, yPercent: -100})
@@ -64,16 +70,17 @@ var index = function () {
 		setSwiper()
 		setTips()
 		setVideo()
+		pcDrag()
 	};
 	return {
 		init: ()=>{
-			init();
+			init()
 		},
 		menu: (boolean)=>{
 			menuDisplay(boolean)
 		},
 		goto: ()=>{
-			toFollowUs();
+			toFollowUs()
 		}
 	};
 }();
