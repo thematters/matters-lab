@@ -28,7 +28,7 @@ block main
 				.planet
 		.orbit.orbit-5
 			.planets
-				.planet.planet-1.active
+				.planet.planet-1
 				.planet.planet-2
 				.planet.planet-3
 		.container
@@ -36,21 +36,41 @@ block main
 				h2.d-inline-block Who We Empower
 			hr
 			article.text-center
-				.creators
-					.title
-						h3 Creators
-					.text
-						p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
-				.developers
-					.title
-						h3 Developers
-					.text
-						p Open-source community, build Dapp, create the future
-				.investors
-					.title
-						h3 Investors
-					.text
-						p Be part of the Web3 innovation movement and reap rewards
+				.slider
+					.slide.slide-1
+						.title
+							h3 Creators
+						.text
+							p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
+					.slide.slide-2
+						.title
+							h3 Developers
+						.text
+							p Open-source community, build Dapp, create the future
+					.slide.slide-3
+						.title
+							h3 Investors
+						.text
+							p Be part of the Web3 innovation movement and reap rewards
+				.navigation.d-flex.align-items-center.justify-content-center
+					button.nav.nav-1(onClick="index.slide('1')")
+					button.nav.nav-2(onClick="index.slide('2')")
+					button.nav.nav-3(onClick="index.slide('3')")
+				//- .creators
+				//- 	.title
+				//- 		h3 Creators
+				//- 	.text
+				//- 		p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
+				//- .developers
+				//- 	.title
+				//- 		h3 Developers
+				//- 	.text
+				//- 		p Open-source community, build Dapp, create the future
+				//- .investors
+				//- 	.title
+				//- 		h3 Investors
+				//- 	.text
+				//- 		p Be part of the Web3 innovation movement and reap rewards
 	section.our_partners_and_supporters
 		.container
 			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row

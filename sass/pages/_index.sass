@@ -236,11 +236,11 @@
             top: -60%
             left: 0
             +min($md)
-                top: -85%
+                top: -105%
         hr
             +bg('../img/wwe-dec-line.jpg')
             width: 1px
-            height: 80px
+            height: 40px
             margin: 0 auto 16px auto
         article
             position: relative
@@ -248,14 +248,34 @@
             margin: 0 auto 80px auto
             +min($md)
                 width: 350px
-            .text
-                p
-                    color: $grey
-            .developers, .creators
+            .slider
+                .slide
+                    .text
+                        p
+                            color: $grey
+                    &.slide-2, &.slide-3
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+            .navigation
                 position: absolute
-                top: 0
+                top: calc(100% + 24px)
                 left: 0
                 width: 100%
+                text-align: center
+                button
+                    +anm(all)
+                    width: 8px
+                    height: 8px
+                    border-radius: 50%
+                    background-color: $grey
+                    margin: 0 12px
+                    &.active
+                        width: 16px
+                        height: 16px
+                        border: 2px solid $white
+                        background-color: transparent
     section.our_partners_and_supporters
         header
             margin: 0 0 40px 0
