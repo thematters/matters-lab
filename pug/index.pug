@@ -28,7 +28,7 @@ block main
 				.planet
 		.orbit.orbit-5
 			.planets
-				.planet.planet-1.active
+				.planet.planet-1
 				.planet.planet-2
 				.planet.planet-3
 		.container
@@ -36,21 +36,41 @@ block main
 				h2.d-inline-block Who We Empower
 			hr
 			article.text-center
-				.creators
-					.title
-						h3 Creators
-					.text
-						p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
-				.developers
-					.title
-						h3 Developers
-					.text
-						p Open-source community, build Dapp, create the future
-				.investors
-					.title
-						h3 Investors
-					.text
-						p Be part of the Web3 innovation movement and reap rewards
+				.slider
+					.slide.slide-1
+						.title
+							h3 Creators
+						.text
+							p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
+					.slide.slide-2
+						.title
+							h3 Developers
+						.text
+							p Open-source community, build Dapp, create the future
+					.slide.slide-3
+						.title
+							h3 Investors
+						.text
+							p Be part of the Web3 innovation movement and reap rewards
+				.navigation.d-flex.align-items-center.justify-content-center
+					button.nav.nav-1(onClick="index.slide('1')")
+					button.nav.nav-2(onClick="index.slide('2')")
+					button.nav.nav-3(onClick="index.slide('3')")
+				//- .creators
+				//- 	.title
+				//- 		h3 Creators
+				//- 	.text
+				//- 		p Decentralized publishing, Ownership Verification, NFT-powered Subscriptions, Token-driven Community, DAO-based Governance
+				//- .developers
+				//- 	.title
+				//- 		h3 Developers
+				//- 	.text
+				//- 		p Open-source community, build Dapp, create the future
+				//- .investors
+				//- 	.title
+				//- 		h3 Investors
+				//- 	.text
+				//- 		p Be part of the Web3 innovation movement and reap rewards
 	section.our_partners_and_supporters
 		.container
 			header.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
@@ -118,35 +138,6 @@ block main
 							.buttons.text-end
 								a.btn.outline(href="https://matters.news/" target="_blank")
 									span LEARN MORE
-				.traveloggers
-					.row
-						.col-12.col-md-6
-							figure.img
-								img.img-fluid(src="img/ps-traveloggers.png")
-						.col-12.col-md-6
-							.title
-								h3 Traveloggers
-							.text
-								p
-									| Traveloggers are dynamic NFTs used as avatars and notebooks, where users can take turns writing content on Ethereum and trade the resulting NFT. It is the first Dapp built on Matters' "Logbook" protocol, allowing users to collaborate on digital assets sequentially. The project was a massive success with pre-order selling out within 10 minutes and now trading on 
-									a(href="https://opensea.io/collection/traveloggers" target="_blank") Open Sea
-									| .
-							.buttons.text-end
-								a.btn.outline(href="https://matterslab.medium.com/traveloggers-is-the-first-nft-social-media-avatar-to-expand-private-ownership-with-collective-e09875f5948d" target="_blank")
-									span LEARN MORE
-				.on_site
-					.row
-						.col-12.col-md-6
-							figure.img
-								img.img-fluid(src="img/ps-on_site.png")
-						.col-12.col-md-6
-							.title
-								h3 Non-fiction Writing Award
-							.text
-								p Matters and the Renaissance Foundation launched the Non-fiction Writing Award to support independent writers bravely writing at the frontline of the era.
-							.buttons.text-end
-								a.btn.outline(href="https://mattersonsite-en.mystrikingly.com/" target="_blank")
-									span LEARN MORE
 				.the_space
 					.row
 						.col-12.col-md-6
@@ -156,11 +147,39 @@ block main
 							.title
 								h3 The Space
 							.text
-								p The Space Project brings together NFT, Harberger Tax, and Universal Basic Income concepts in an open-source community. Launching 2022.
-								p
-									strong Coming soon
+								p The Space is an everlasting, Draw-to-Earn pixel canvas that brings together NFT, the Harberger Tax, and Universal Basic Income concepts in an open-source community. It is not only collaboratively created, but also collaboratively sustained, maintained and owned as an on-chain museum for Web3 society and culture. In the future, the administration of The Space will be transferred to SpaceDAO, a decentralized autonomous organization formed by all $SPACE token holders. 
 							.buttons.text-end
-								a.btn.outline(href="https://www.thespace.game/" target="_blank")
+								a.btn.outline(href="https://thespace.game/" target="_blank")
+									span LEARN MORE
+				.traveloggers
+					.row
+						.col-12.col-md-6
+							figure.img
+								img.img-fluid(src="img/ps-traveloggers.png")
+						.col-12.col-md-6
+							.title
+								h3 Logbook
+							.text
+								p
+									a(href="https://traveloggers.matters.news/" target="_blank") Traveloggers
+									|  is the first dynamic NFTs used as PFP and a collaboration protocol Logbook to write, transfer, and co-create on the Blockchain. Owners of 1,500 Traveloggers will have access to the most revolutionary experiments to explore the creator economy model in Matterverse, which include but not limited to airdrop benefits of NFT programs and governance tokens. Traveloggers project was a massive success with pre-order selling out within 10 minutes and now trading on 
+									a(href="https://opensea.io/collection/traveloggers" target="_blank") Open Sea
+									| .
+							.buttons.text-end
+								a.btn.outline(href="https://logbook.matters.news/" target="_blank")
+									span LEARN MORE
+				.on_site
+					.row
+						.col-12.col-md-6
+							figure.img
+								img.img-fluid(src="img/ps-on_site.png")
+						.col-12.col-md-6
+							.title
+								h3 Creator Grants
+							.text
+								p Matters Lab’s publishing ecosystem surrounding creator economy include multiple grants that empower independent writers: Frontline Award to support civil journalists worldwide, Million Matters Community Fund and Rocket Fund for community, Discord Matterverse Moderator Fund, all to incubate a CreatorDAO in near future.
+							.buttons.text-end
+								a.btn.outline(href="https://mattersonsite-en.mystrikingly.com/" target="_blank")
 									span LEARN MORE
 	section.press_coverage
 		.container
@@ -198,6 +217,50 @@ block main
 										h3 Columbia Journalism Review
 									.text
 										p “The [Chinese-language media’s] attempts to adopt new technology to weather financial and political turbulence can inspire the West...allowing Matters users to trade NFT avatars empower users to independently open censorship-resilient sites, turning their work into a part of the Ethereum blockchain as a public ledger and selling it.”
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+						.swiper-slide
+							a.digest(href="https://www.sixthtone.com/news/1002403/how-blockchain-could-revolutionize-chinas-media" target="_blank")
+								div
+									.title
+										h3 Sixth Tone
+									.text
+										p “Blockchain could revolutionize revenue for news publications, which once relied heavily on advertising. Zhang’s blockchain-backed business model will generate more revenue than the existing subscription method. Readers can pay for the articles that they like reading, rather than pay for a blanket monthly or yearly subscription. ”
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+						.swiper-slide
+							a.digest(href="https://www.openbook.org.tw/article/p-66088" target="_blank")
+								div
+									.title
+										h3 Openbook
+									.text
+										p 「NFT是資本主義對自己的修正，是防止它極右化的一個修復，它就是一個巨大的社會實驗，它讓文化商品有可能得到長期價值，且在短期也能套現。張潔平期待所有對現階段的網路環境有所不滿的人都能早一點走到Web3，去做一個行動者。」
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+						.swiper-slide
+							a.digest(href="https://www.inside.com.tw/feature/nft/25869-matters-web3-nft" target="_blank")
+								div
+									.title
+										h3 Inside
+									.text
+										p 「NFT 對創作者而言是一種徹底改寫規則的發行方式，不是任何發 NFT 的計畫都能賺到快錢，但對真正有價值的內容而言，NFT 可以透過智能合約，在這 20 年持續獲得分潤的工具，內容可以被『整存零取』。」
+								div
+									.buttons.text-end
+										.btn.arrow
+											i.icon
+						.swiper-slide
+							a.digest(href="https://www.dw.com/zh/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%A9%E5%A5%BD%E6%96%B0%E9%97%BB%E6%9B%B4%E5%AE%89%E5%85%A8%E6%9B%B4%E5%80%BC%E9%92%B1/a-44329162?&zhongwen=simp" target="_blank")
+								div
+									.title
+										h3 德國之聲
+									.text
+										p 「Matters试图使用区块链的底层技术建立一个构架在合理的评价模型之上的内容交易体系这一体系最终是为了摆脱由广告利益驱动的中心化算法，使内容创作者可以获得直接回报。」
 								div
 									.buttons.text-end
 										.btn.arrow
@@ -250,12 +313,6 @@ block main
 					.col-6.col-md-2
 						.member
 							figure.frame
-								img.img-fluid(src="img/bmn-xia.png")
-							span.title Data Scientist
-							span.name Xia
-					.col-6.col-md-2
-						.member
-							figure.frame
 								img.img-fluid(src="img/bmn-robert_lu.png")
 							span.title Product Engineer
 							span.name Robert Lu
@@ -271,6 +328,12 @@ block main
 								img.img-fluid(src="img/bmn-charlie.png")
 							span.title Developer (PT)
 							span.name Charlie
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-elk_leung.png")
+							span.title Front-end Engineer 
+							span.name Elk Leung
 					.col-6.col-md-2
 						.member
 							figure.frame
@@ -301,6 +364,24 @@ block main
 								img.img-fluid(src="img/bmn-xinan_he.png")
 							span.title Event
 							span.name Xinan He
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-yu_hsuan_chang.png")
+							span.title Content Operations
+							span.name Yu-Hsuan Chang
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-emilie.png")
+							span.title Brand & Operations
+							span.name Emilie
+					.col-6.col-md-2
+						.member
+							figure.frame
+								img.img-fluid(src="img/bmn-xia.png")
+							span.title Data Scientist
+							span.name Xia
 	section.follow_us#follow_us
 		.container
 			.content
@@ -327,13 +408,15 @@ block main
 					script(type='text/javascript').
 						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
 					.buttons
+						a.btn.social.matters(href="https://matters.news/" target="_blank")
+							i.icon
 						a.btn.social.twitter(href="https://twitter.com/Mattersw3b" target="_blank")
 							i.icon
 						a.btn.social.discord(href="https://discord.com/invite/matterslab" target="_blank")
 							i.icon
 						a.btn.social.medium(href="https://matterslab.medium.com/" target="_blank")
 							i.icon
-						a.btn.social.telegram(href="https://t.me/joinchat/BXzlWUhXaWNZ-TXJZJCzDQ" target="_blank")
+						a.btn.social.linkedin(href="https://www.linkedin.com/company/matters-lab/" target="_blank")
 							i.icon
 	section.our_latest_blogs
 		.container

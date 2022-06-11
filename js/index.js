@@ -1,4 +1,5 @@
 var index = function () {
+	var slider, slide;
 	var menuDisplay = (boolean)=>{
 		let $y, $menu, $close
 		if(boolean){
@@ -14,18 +15,18 @@ var index = function () {
 		gsap.set('#nav .menu', {display: $menu})
 		gsap.set('#nav .close', {display: $close})
 	}
-	var setSwiper = ()=>{
+	var setSwiper = () => {
 		new Swiper(".swiper", {
 			slidesPerView: "auto",
 			spaceBetween: 16
 		});
 	}
-	var setTips = ()=>{
+	var setTips = () => {
 		const tl = gsap.timeline({repeat: -1})
 		tl.from('.tips .icon', {duration: 1, yPercent: -100, ease: 'power3.out'})
 		  .to('.tips .icon', {duration: 1, yPercent: 100, ease: 'power3.in'})
 	}
-	var setTrigger = ()=>{
+	var setTrigger = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".who_we_empower",
@@ -48,39 +49,88 @@ var index = function () {
 		gsap.to('.orbit-3 .planets', {duration: 180, repeat: -1, rotation: 360, ease: "none"})
 		gsap.to('.orbit-4 .planets', {duration: 120, repeat: -1, rotation: 360, ease: "none"})
 	}
-	var setVideo = ()=>{
+	var setSlider = () => {
+		slider = gsap.timeline({
+			repeat: -1,
+			repeatDelay: 5
+		})
+		gsap.to('.orbit-3 .planets', {duration: 180, repeat: -1, rotation: 360, ease: "none"})
+		gsap.to('.orbit-4 .planets', {duration: 120, repeat: -1, rotation: 360, ease: "none"})
+		gsap.set('.who_we_empower .slide', {autoAlpha: 0})
+
+		slider.add(()=>{ setSlide('1') }, 0)
+					.add(()=>{ setSlide('2') }, 5)
+					.add(()=>{ setSlide('3') }, 10)
+	}
+	var setSlide = (val) => {
+		let $rotation
+		switch (val) {
+			case '1':
+				$rotation = 0
+				break;
+			case '2':
+				$rotation = 111
+				break;
+			case '3':
+				$rotation = 250
+				break;
+		}
+		slide = gsap.timeline({
+			paused: true
+		})
+		slide.add(()=>{
+				const $planet = document.querySelectorAll('.planet');
+				const $nav = document.querySelectorAll('.nav');
+				for (const item of $planet) {
+					item.classList.remove('active');
+				}
+				for (const item of $nav) {
+					item.classList.remove('active');
+				}
+			})
+			.add(()=>{
+				document.querySelector('.nav-'+val).classList.add("active")
+			})
+		  .to('.who_we_empower .slide', {duration: .5, autoAlpha: 0})
+			.to('.orbit-5 .planets', {duration: 1, rotation: $rotation})
+			.add(()=>{
+				document.querySelector('.planet-'+val).classList.add("active")
+			}, 1.5)
+			.to('.who_we_empower .slide-'+val, {duration: .5, autoAlpha: 1}, 1.5)
+		slide.play()
+	}
+	var setVideo = () => {
 		if(window.innerWidth >= 768){
 			document.querySelector(".intro video").src = "video/intro-video.mp4";
 			document.querySelector(".our_vision_and_mission video").src = "video/ovam-video.mp4";
 		}
 	}
-	var toFollowUs = ()=>{
+	var toFollowUs = () => {
 		document.querySelector('.follow_us').scrollIntoView({ behavior: 'smooth', block: 'center' })
 	}
-	var pcDrag = ()=>{
-		const mount = document.querySelectorAll('.swiper-slide').length
-		if(mount > 3){
-			gsap.set('.press_coverage article', {className:"+=article active"})
-		}
-	}
-	var init = ()=>{
+	var init = () => {
 		gsap.set('#nav .close', {display: 'none'})
 		gsap.set(menu, {autoAlpha: 0, yPercent: -100})
-		setTrigger()
+		// setTrigger()
+		setSlider()
 		setSwiper()
 		setTips()
 		setVideo()
-		pcDrag()
 	};
 	return {
-		init: ()=>{
+		init: () => {
 			init()
 		},
 		menu: (boolean)=>{
 			menuDisplay(boolean)
 		},
-		goto: ()=>{
+		goto: () => {
 			toFollowUs()
+		},
+		slide: (val) => {
+			slider.pause()
+			slide.pause()
+			setSlide(val)
 		}
 	};
 }();
